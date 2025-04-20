@@ -9,17 +9,6 @@ def buscar_palabra_en_archivo(archivo_path: str, palabra: str, buffer_size: int 
     try:
         with open(archivo_path, 'rb') as f:
             offset = 0
- import os
-
-def buscar_palabra_en_archivo(archivo_path: str, palabra: str, buffer_size: int = 8*1024*1024):
-    palabra = palabra.lower().encode('utf-8')  # buscamos en bytes, insensible a mayusculas
-    palabra_len = len(palabra)
-
-    posiciones = []  # donde encontraremos la palabra
-
-    try:
-        with open(archivo_path, 'rb') as f:
-            offset = 0
             buffer_anterior = b''
 
             while True:
